@@ -12,12 +12,14 @@ function TodoInsert({ insertTodoItem }) {
         onKeyDown={function (e) {
           if (e.keyCode === 13) {
             insertTodoItem(todoInput.current.value);
+            todoInput.current.value = "";
           }
         }}
       />
       <button
         onClick={function () {
           insertTodoItem(todoInput.current.value);
+          todoInput.current.value = "";
         }}
       >
         <i className="fa-solid fa-plus"></i>
